@@ -7,7 +7,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -25,10 +24,13 @@ public class Group {
     private Long id;
     @ManyToOne
     @JoinColumn(name = "department_id")
-    private Department departmentList;
+    private Department department;
     private String name;
     private Integer course;
 
     @OneToMany(mappedBy = "group", cascade = CascadeType.ALL)
     private List<Schedule> scheduleList;
+
+    @OneToMany(mappedBy = "group")
+    private List<Student> students;
 }

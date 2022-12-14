@@ -23,6 +23,6 @@ public class Department {
     private Facility facility;
     private String name;
     private String shortName;
-    @OneToMany(mappedBy = "departmentList")
+    @OneToMany(mappedBy = "department")
     private List<Group> groups;
 }
