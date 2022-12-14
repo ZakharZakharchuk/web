@@ -18,11 +18,11 @@ public class TeacherMapper {
     }
     public Teacher dtoToTeacher(TeacherDto teacherDto){
         Teacher teacher = new Teacher();
-        teacher.setId(teacher.getId());
-        teacher.setName(teacher.getName());
-        teacher.setEmail(teacher.getEmail());
-        teacher.setSurname(teacher.getSurname());
-        teacher.setPhone(teacher.getPhone());
+        teacher.setId(teacherDto.getId());
+        teacher.setName(teacherDto.getName());
+        teacher.setEmail(teacherDto.getEmail());
+        teacher.setSurname(teacherDto.getSurname());
+        teacher.setPhone(teacherDto.getPhone());
         return teacher;
     }
 }
