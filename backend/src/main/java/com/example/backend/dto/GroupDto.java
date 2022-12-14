@@ -1,7 +1,8 @@
 package com.example.backend.dto;
 
-import com.example.backend.entity.Department;
+import lombok.Data;
 
+@Data
 public class GroupDto {
     private Long id;
     private Long departmentId;

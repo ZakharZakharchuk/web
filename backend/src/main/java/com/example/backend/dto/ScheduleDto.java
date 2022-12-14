@@ -1,7 +1,9 @@
 package com.example.backend.dto;
 
 import java.util.Date;
+import lombok.Data;
 
+@Data
 public class ScheduleDto {
 
     private Long id;
