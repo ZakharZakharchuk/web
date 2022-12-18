@@ -2,7 +2,32 @@
   <div>
     <h1>teachers-page</h1>
     <hr>
-    {{ teachers }}
+    <table>
+    <td>
+      <tr>Ім'я</tr>
+      <tr v-for="(teacher, index) in teachers" :key="index"> {{ teacher.name }} </tr>
+    </td>
+      <td>
+        <tr>Прізвище</tr>
+        <tr v-for="(teacher, index) in teachers" :key="index"> {{ teacher.surname }} </tr>
+      </td>
+      <td>
+        <tr>Мобільний</tr>
+        <tr v-for="(teacher, index) in teachers" :key="index"> {{ teacher.phone }} </tr>
+      </td>
+      <td>
+        <tr>Email</tr>
+        <tr v-for="(teacher, index) in teachers" :key="index"> {{ teacher.email }} </tr>
+      </td>
+      <td>
+        <tr>Дії</tr>
+        <tr v-for="(teacher, index) in teachers" :key="index">
+          <a href = "/update" >Редагувати</a>
+          <a href = "/update" >Видалити</a>
+        </tr>
+      </td>
+    </table>
+    <a href="/add">Додати викладача</a>
   </div>
 </template>
 
@@ -18,14 +43,15 @@ export default {
   },
   mounted() {
     axios.get('http://localhost:8080/teachers/getAll')
-        .then(response => (this.teachers = response))
+        .then(response => (this.teachers = response.data))
         .catch(error => console.log(error));
   }
 }
-//const URL = 'http://localhost:8080/';
+
 
 </script>
 
 <style scoped>
+
 
 </style>
