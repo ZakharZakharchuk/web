@@ -1,7 +1,7 @@
 package com.example.backend.controller;
 
 import com.example.backend.dto.ScheduleDto;
-import com.example.backend.service.ScheduleService;
+import com.example.backend.service.impl.ScheduleServiceImpl;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/schedules")
 @AllArgsConstructor
 public class ScheduleController {
-    private final ScheduleService scheduleService;
+    private final ScheduleServiceImpl scheduleService;
 
     @GetMapping("/getAll")
     public List<ScheduleDto> getAllSchedules() {

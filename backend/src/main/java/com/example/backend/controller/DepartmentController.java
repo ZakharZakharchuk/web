@@ -1,7 +1,7 @@
 package com.example.backend.controller;
 
 import com.example.backend.dto.DepartmentDto;
-import com.example.backend.service.DepartmentService;
+import com.example.backend.service.impl.DepartmentServiceImpl;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class DepartmentController {
 
-    private final DepartmentService departmentService;
+    private final DepartmentServiceImpl departmentService;
 
     @GetMapping("/getAll")
     public List<DepartmentDto> getAllDepartments() {

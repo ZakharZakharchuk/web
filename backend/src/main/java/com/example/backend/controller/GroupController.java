@@ -1,7 +1,7 @@
 package com.example.backend.controller;
 
 import com.example.backend.dto.GroupDto;
-import com.example.backend.service.GroupService;
+import com.example.backend.service.impl.GroupServiceImpl;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/groups")
 @AllArgsConstructor
 public class GroupController {
-    private final GroupService groupService;
+    private final GroupServiceImpl groupService;
 
     @GetMapping("/getAll")
     public List<GroupDto> getAllGroups() {
