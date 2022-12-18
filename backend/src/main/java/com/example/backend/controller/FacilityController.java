@@ -4,6 +4,7 @@ import com.example.backend.dto.FacilityDto;
 import com.example.backend.service.FacilityService;
 import java.util.List;
 import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/facilities")
 @AllArgsConstructor
+@CrossOrigin
 public class FacilityController {
     private final FacilityService facilityService;
 

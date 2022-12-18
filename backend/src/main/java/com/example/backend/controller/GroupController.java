@@ -4,6 +4,7 @@ import com.example.backend.dto.GroupDto;
 import com.example.backend.service.GroupService;
 import java.util.List;
 import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/groups")
 @AllArgsConstructor
+@CrossOrigin
 public class GroupController {
     private final GroupService groupService;
 

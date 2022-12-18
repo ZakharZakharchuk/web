@@ -4,6 +4,7 @@ import com.example.backend.dto.DepartmentDto;
 import com.example.backend.service.DepartmentService;
 import java.util.List;
 import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/departments")
 @AllArgsConstructor
+@CrossOrigin
 public class DepartmentController {
 
     private final DepartmentService departmentService;
