@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent = "submitForm()">
+    <form action="/teachers">
       <label for="name">name:</label><br>
       <input type="text" id="name" name="name" v-model="name" required ><br><br>
       <label for="surname">surname:</label><br>
@@ -9,7 +9,7 @@
       <input type="text" id="phone" name="phone" v-model="phone" required ><br><br>
       <label for="email">email:</label><br>
       <input type="text" id="email" name="email" v-model="email" required ><br><br>
-      <input type="submit" value="Submit">
+      <input v-on:click="submitForm()" type="submit" value="Submit">
     </form>
 
   </div>
@@ -29,7 +29,7 @@ export default {
   }),
   methods: {
     submitForm() {
-      axios.post('http://localhost:8080/teachers/update', {
+      axios.post('http://localhost:8080/teachers/save', {
         name: this.name,
         surname: this.surname,
         phone: this.phone,

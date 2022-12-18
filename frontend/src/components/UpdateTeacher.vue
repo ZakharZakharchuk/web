@@ -1,24 +1,17 @@
 <template>
   <div>
-    <h1>Редагувати викладача</h1>
-    <hr>
-    <td>
-      <tr>Ім'я</tr>
-      <tr><input type="text" id="name" ></tr>
-    </td>
-    <td>
-      <tr>Прізвище</tr>
-      <tr><input type="text" id="surname"></tr>
-    </td>
-    <td>
-      <tr>Мобільний</tr>
-      <tr><input type="text" id="phone"></tr>
-    </td>
-    <td>
-      <tr>Почта</tr>
-      <tr><input type="text" id="email"></tr>
-    </td>
-    <button onclick="updateTeacher(id, name, surname, phone, email)">Підтвердити</button>
+    <form @submit.prevent = "submitForm()">
+      <label for="name">name:</label><br>
+      <input type="text" id="name" name="name" v-model="name" required ><br><br>
+      <label for="surname">surname:</label><br>
+      <input type="text" id="surname" name="surname" v-model="surname" required ><br><br>
+      <label for="phone">phone:</label><br>
+      <input type="text" id="phone" name="phone" v-model="phone" required ><br><br>
+      <label for="email">email:</label><br>
+      <input type="text" id="email" name="email" v-model="email" required ><br><br>
+      <input v-on:submit="submitForm()" type="submit" value="Submit">
+    </form>
+
   </div>
 </template>
 
@@ -26,20 +19,30 @@
 import axios from 'axios';
 
 export default {
-  name: "UpdateTeacher"
-}
+  name: "UpdateTeacher",
+  props:{
 
-export class TeachersService {
-  async updateTeacher(name, surname, phone, email ) {
-    axios.post('http://localhost:8080/teachers/update', {
-      name: name,
-      surname: surname,
-      phone: phone,
-      email: email
-    } )
+  },
+  data: () => ({
+    id: '',
+    email: '',
+    surname: '',
+    name: '',
+    phone: '',
+    teachers: [],
+  }),
+  methods: {
+    submitForm() {
+      axios.post('http://localhost:8080/teachers/update', {
+        id: this.id,
+        name: this.name,
+        surname: this.surname,
+        phone: this.phone,
+        email: this.email
+      } )
+    }
   }
 }
-
 
 
 </script>
