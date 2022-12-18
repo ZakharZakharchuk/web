@@ -2,7 +2,9 @@ package com.example.backend.mapper;
 
 import com.example.backend.dto.NewsDto;
 import com.example.backend.entity.News;
+import org.springframework.stereotype.Component;
 
+@Component
 public class NewsMapper {
 
     public NewsDto newsToDto(News news) {

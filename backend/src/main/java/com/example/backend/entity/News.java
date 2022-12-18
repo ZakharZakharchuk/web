@@ -17,5 +17,6 @@ public class News {
     @Column(name = "news_id")
     private Long id;
 
+    @Column(name = "message")
     private String message;
 }

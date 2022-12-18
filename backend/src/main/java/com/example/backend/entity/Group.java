@@ -25,7 +25,9 @@ public class Group {
     @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;
+    @Column(name = "name")
     private String name;
+    @Column(name = "course")
     private Integer course;
 
     @OneToMany(mappedBy = "group", cascade = CascadeType.ALL)

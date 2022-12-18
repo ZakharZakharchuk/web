@@ -24,6 +24,7 @@ public class Discipline {
     @Column(name = "discipline_id")
     private Long id;
 
+    @Column(name = "name")
     private String name;
 
     @OneToMany(mappedBy = "discipline", cascade = CascadeType.ALL)
