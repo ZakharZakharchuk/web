@@ -1,38 +1,15 @@
 package com.example.backend.service;
 
 import com.example.backend.dto.FacilityDto;
-import com.example.backend.mapper.FacilityMapper;
-import com.example.backend.repository.FacilityRepository;
 import java.util.List;
-import java.util.stream.Collectors;
-import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Service;
 
-@Service
-@AllArgsConstructor
-public class FacilityService {
+public interface FacilityService {
 
-    private final FacilityRepository facilityRepository;
-    private final FacilityMapper facilityMapper;
+    List<FacilityDto> getAllFacilities();
 
-    public List<FacilityDto> getAllFacilities() {
-        return facilityRepository.findAll().stream()
-            .map(facilityMapper::facilityToDto).collect(
-                Collectors.toList());
-    }
+    FacilityDto saveFacility(FacilityDto facilityDto);
 
-    public FacilityDto saveFacility(FacilityDto facilityDto) {
-        return facilityMapper.facilityToDto(
-            facilityRepository.save(facilityMapper.dtoToFacility(facilityDto)));
-    }
+    FacilityDto updateFacility(FacilityDto facilityDto);
 
-    public FacilityDto updateFacility(FacilityDto facilityDto) {
-        return facilityMapper.facilityToDto(
-            facilityRepository.save(facilityMapper.dtoToFacility(facilityDto)));
-    }
-
-    public void deleteFacilityById(Long facilityId) {
-        facilityRepository.deleteById(facilityId);
-    }
+    void deleteFacilityById(Long facilityId);
 }
-

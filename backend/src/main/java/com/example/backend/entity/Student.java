@@ -24,8 +24,11 @@ public class Student {
     @ManyToOne
     @JoinColumn(name = "teacher_id")
     private Group group;
+    @Column(name = "name")
     private String name;
+    @Column(name = "email")
     private String email;
+    @Column(name = "phone")
     private String phone;
 
     @ManyToMany(mappedBy = "studentList")

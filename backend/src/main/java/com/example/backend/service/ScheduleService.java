@@ -1,36 +1,15 @@
 package com.example.backend.service;
 
 import com.example.backend.dto.ScheduleDto;
-import com.example.backend.mapper.ScheduleMapper;
-import com.example.backend.repository.ScheduleRepository;
 import java.util.List;
-import java.util.stream.Collectors;
-import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Service;
 
-@Service
-@AllArgsConstructor
-public class ScheduleService {
-    private final ScheduleRepository scheduleRepository;
-    private final ScheduleMapper scheduleMapper;
+public interface ScheduleService {
 
-    public List<ScheduleDto> getAllSchedules() {
-        return scheduleRepository.findAll().stream()
-            .map(scheduleMapper::scheduleToDto).collect(
-                Collectors.toList());
-    }
+    List<ScheduleDto> getAllSchedules();
 
-    public ScheduleDto saveSchedule(ScheduleDto scheduleDto) {
-        return scheduleMapper.scheduleToDto(
-            scheduleRepository.save(scheduleMapper.dtoToSchedule(scheduleDto)));
-    }
+    ScheduleDto saveSchedule(ScheduleDto scheduleDto);
 
-    public ScheduleDto updateSchedule(ScheduleDto scheduleDto) {
-        return scheduleMapper.scheduleToDto(
-            scheduleRepository.save(scheduleMapper.dtoToSchedule(scheduleDto)));
-    }
+    ScheduleDto updateSchedule(ScheduleDto scheduleDto);
 
-    public void deleteScheduleById(Long scheduleId) {
-        scheduleRepository.deleteById(scheduleId);
-    }
+    void deleteScheduleById(Long scheduleId);
 }

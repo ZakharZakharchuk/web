@@ -11,10 +11,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import lombok.Data;
 
 @Data
 @Entity
+@Table(name = "schedules")
 public class Schedule {
 
     @Id
@@ -30,7 +32,9 @@ public class Schedule {
     @ManyToOne
     @JoinColumn(name = "group_id")
     private Group group;
+    @Column(name = "time")
     private Date time;
+    @Column(name = "classroom")
     private String classroom;
     @ManyToMany
     @JoinTable(
