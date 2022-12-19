@@ -4,6 +4,7 @@ import com.example.backend.dto.FacilityDto;
 import com.example.backend.service.FacilityService;
 import java.util.List;
 import lombok.AllArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @CrossOrigin
 public class FacilityController {
+
     private final FacilityService facilityService;
 
     @GetMapping("/getAll")
@@ -24,12 +26,12 @@ public class FacilityController {
     }
 
     @PostMapping("/save")
-    public FacilityDto saveFacility(@RequestBody FacilityDto facilityDto) {
+    public FacilityDto saveFacility(@Validated @RequestBody FacilityDto facilityDto) {
         return facilityService.saveFacility(facilityDto);
     }
 
     @PostMapping("/update")
-    public FacilityDto updateFacility(@RequestBody FacilityDto facilityDto) {
+    public FacilityDto updateFacility(@Validated @RequestBody FacilityDto facilityDto) {
         return facilityService.updateFacility(facilityDto);
     }
 
