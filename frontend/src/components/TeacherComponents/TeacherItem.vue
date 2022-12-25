@@ -36,21 +36,6 @@ export default {
       axios.post('http://localhost:8080/teachers/delete', {
         id: id,
       })
-    },
-    updateTeacher(id, name, surname, email, phone) {
-      axios.post('http://localhost:8080/teachers/update', {
-        id: id,
-        name: name,
-        surname: surname,
-        email: email,
-        phone: phone
-      })
-          .then(function (response) {
-        console.log(response);
-      })
-          .catch(function (error) {
-            console.log(error);
-          });
     }
   }
 }
