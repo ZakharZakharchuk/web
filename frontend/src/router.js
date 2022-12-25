@@ -9,6 +9,7 @@ import Teachers from "@/pages/TeachersPage";
 import Students from "@/pages/StudentsPage";
 import NewsPage from "@/pages/NewsPage";
 import AddTeacher from "@/components/TeacherComponents/AddTeacher";
+import UpdateTeacher from "@/components/TeacherComponents/UpdateTeacher";
 
 
 const routes = [
@@ -51,6 +52,10 @@ const routes = [
     {
         path: '/add',
         component: AddTeacher
+    },
+    {
+        path: '/update/:id',
+        component: UpdateTeacher
     }
 ]
 export default () => createRouter({
