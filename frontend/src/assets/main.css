@@ -5,3 +5,40 @@ table{
     margin: 0;
     padding: 0;
 }
+input:-webkit-autofill {
+    background-color: aquamarine;
+}
+
+.form-container > label {
+    width: 100px;
+}
+
+button {
+    background-color: antiquewhite;
+    border: darkcyan 2px solid;
+    cursor: pointer;
+}
+
+input {
+    width: 150px;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid;
+    border-top: 0;
+}
+
+.table {
+    font-size: 24px;
+    margin-top: 40px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    border: #717171 1px solid;
+}

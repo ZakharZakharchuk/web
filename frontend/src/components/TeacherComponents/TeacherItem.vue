@@ -1,0 +1,65 @@
+<template>
+  <div>
+
+    <div class="table">
+
+
+      <form action="/teachers">
+        <input type="text" :value="teacher.id" name="id">
+        <input type="text" :value="teacher.name" name="name">
+        <input type="text" :value="teacher.surname" name="surname">
+        <input type="text" :value="teacher.email" name="email">
+        <input type="text" :value="teacher.phone" name="phone">
+        <button
+            type="submit"
+            @click="updateTeacher(teacher.id, teacher.name, teacher.surname, teacher.email, teacher.phone) ">Редагувати
+        </button>
+      </form>
+      <form action="/teachers">
+        <button type="submit" @click="deleteTeacher(teacher.id) ">Видалити</button>
+      </form>
+    </div>
+
+
+  </div>
+</template>
+
+<script>
+import axios from "axios";
+
+export default {
+  name: "TeacherItem",
+  props: {
+    teacher: {
+      type: Object,
+    }
+  },
+  methods: {
+    deleteTeacher(id) {
+      axios.post('http://localhost:8080/teachers/delete', {
+        id: id,
+      })
+    },
+    updateTeacher(id, name, surname, email, phone) {
+      axios.post('http://localhost:8080/teachers/update', {
+        id: id,
+        name: name,
+        surname: surname,
+        email: email,
+        phone: phone
+      })
+          .then(function (response) {
+        console.log(response);
+      })
+          .catch(function (error) {
+            console.log(error);
+          });
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+
+</style>

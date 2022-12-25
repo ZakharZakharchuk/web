@@ -8,8 +8,7 @@ import Disciplines from "@/pages/DisciplinesPage";
 import Teachers from "@/pages/TeachersPage";
 import Students from "@/pages/StudentsPage";
 import NewsPage from "@/pages/NewsPage";
-import UpdateTeacher from "@/components/UpdateTeacher";
-import AddTeacher from "@/components/AddTeacher";
+import AddTeacher from "@/components/TeacherComponents/AddTeacher";
 
 
 const routes = [
@@ -48,10 +47,6 @@ const routes = [
     {
         path: '/students',
         component: Students
-    },
-    {
-        path: '/update',
-        component: UpdateTeacher
     },
     {
         path: '/add',
