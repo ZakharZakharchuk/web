@@ -4,6 +4,7 @@ import com.example.backend.dto.StudentDto;
 import com.example.backend.service.StudentService;
 import java.util.List;
 import lombok.AllArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,12 +25,12 @@ public class StudentController {
     }
 
     @PostMapping("/save")
-    public StudentDto saveStudent(@RequestBody StudentDto studentDto) {
+    public StudentDto saveStudent(@Validated @RequestBody StudentDto studentDto) {
         return studentService.saveStudent(studentDto);
     }
 
     @PostMapping("/update")
-    public StudentDto updateStudent(@RequestBody StudentDto studentDto) {
+    public StudentDto updateStudent(@Validated @RequestBody StudentDto studentDto) {
         return studentService.updateStudent(studentDto);
     }
 

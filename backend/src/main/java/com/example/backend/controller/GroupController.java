@@ -4,6 +4,7 @@ import com.example.backend.dto.GroupDto;
 import com.example.backend.service.GroupService;
 import java.util.List;
 import lombok.AllArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,12 +25,12 @@ public class GroupController {
     }
 
     @PostMapping("/save")
-    public GroupDto saveGroup(@RequestBody GroupDto groupDto) {
+    public GroupDto saveGroup(@Validated @RequestBody GroupDto groupDto) {
         return groupService.saveGroup(groupDto);
     }
 
     @PostMapping("/update")
-    public GroupDto updateGroup(@RequestBody GroupDto groupDto) {
+    public GroupDto updateGroup(@Validated @RequestBody GroupDto groupDto) {
         return groupService.updateGroup(groupDto);
     }
 

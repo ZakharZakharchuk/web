@@ -4,6 +4,7 @@ import com.example.backend.dto.DisciplineDto;
 import com.example.backend.service.DisciplineService;
 import java.util.List;
 import lombok.AllArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,12 +25,12 @@ public class DisciplineController {
     }
 
     @PostMapping("/save")
-    public DisciplineDto saveDiscipline(@RequestBody DisciplineDto disciplineDto) {
+    public DisciplineDto saveDiscipline(@Validated @RequestBody DisciplineDto disciplineDto) {
         return departmentService.saveDiscipline(disciplineDto);
     }
 
     @PostMapping("/update")
-    public DisciplineDto updateDiscipline(@RequestBody DisciplineDto disciplineDto) {
+    public DisciplineDto updateDiscipline(@Validated @RequestBody DisciplineDto disciplineDto) {
         return departmentService.updateDiscipline(disciplineDto);
     }
 

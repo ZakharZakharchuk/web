@@ -4,6 +4,7 @@ import com.example.backend.dto.DepartmentDto;
 import com.example.backend.service.DepartmentService;
 import java.util.List;
 import lombok.AllArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,12 +26,12 @@ public class DepartmentController {
     }
 
     @PostMapping("/save")
-    public DepartmentDto saveDepartment(@RequestBody DepartmentDto departmentDto) {
+    public DepartmentDto saveDepartment(@Validated @RequestBody DepartmentDto departmentDto) {
         return departmentService.saveDepartment(departmentDto);
     }
 
     @PostMapping("/update")
-    public DepartmentDto updateDepartment(@RequestBody DepartmentDto departmentDto) {
+    public DepartmentDto updateDepartment(@Validated @RequestBody DepartmentDto departmentDto) {
         return departmentService.updateDepartment(departmentDto);
     }
 

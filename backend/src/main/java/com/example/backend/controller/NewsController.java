@@ -4,6 +4,7 @@ import com.example.backend.dto.NewsDto;
 import com.example.backend.service.NewsService;
 import java.util.List;
 import lombok.AllArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,12 +25,12 @@ public class NewsController {
     }
 
     @PostMapping("/save")
-    public NewsDto saveGroup(@RequestBody NewsDto newsDto) {
+    public NewsDto saveGroup(@Validated @RequestBody NewsDto newsDto) {
         return newsService.saveNews(newsDto);
     }
 
     @PostMapping("/update")
-    public NewsDto updateGroup(@RequestBody NewsDto newsDto) {
+    public NewsDto updateGroup(@Validated @RequestBody NewsDto newsDto) {
         return newsService.updateNews(newsDto);
     }
 

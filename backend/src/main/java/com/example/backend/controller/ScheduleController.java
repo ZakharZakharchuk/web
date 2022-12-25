@@ -4,6 +4,7 @@ import com.example.backend.dto.ScheduleDto;
 import com.example.backend.service.ScheduleService;
 import java.util.List;
 import lombok.AllArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,12 +25,12 @@ public class ScheduleController {
     }
 
     @PostMapping("/save")
-    public ScheduleDto saveSchedule(@RequestBody ScheduleDto scheduleDto) {
+    public ScheduleDto saveSchedule(@Validated @RequestBody ScheduleDto scheduleDto) {
         return scheduleService.saveSchedule(scheduleDto);
     }
 
     @PostMapping("/update")
-    public ScheduleDto updateSchedule(@RequestBody ScheduleDto scheduleDto) {
+    public ScheduleDto updateSchedule(@Validated @RequestBody ScheduleDto scheduleDto) {
         return scheduleService.updateSchedule(scheduleDto);
     }
 
