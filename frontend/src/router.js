@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router/dist/vue-router.esm-bundler'
+import {createRouter, createWebHistory} from 'vue-router/dist/vue-router.esm-bundler'
 import Home from '@/pages/HomePage.vue'
 import Schedule from '@/pages/SchedulePage'
 import Faculty from "@/pages/FacultyPage";
@@ -10,6 +10,10 @@ import Students from "@/pages/StudentsPage";
 import NewsPage from "@/pages/NewsPage";
 import AddTeacher from "@/components/TeacherComponents/AddTeacher";
 import UpdateTeacher from "@/components/TeacherComponents/UpdateTeacher";
+import AddFaculty from "@/components/FacultyComponents/AddFaculty";
+import UpdateFaculty from "@/components/FacultyComponents/UpdateFaculty";
+import AddDiscipline from "@/components/DisciplinesComponents/AddDiscipline";
+import UpdateDiscipline from "@/components/DisciplinesComponents/UpdateDiscipline";
 
 
 const routes = [
@@ -50,15 +54,31 @@ const routes = [
         component: Students
     },
     {
-        path: '/add',
+        path: '/addTeacher',
         component: AddTeacher
     },
     {
-        path: '/update/:id',
+        path: '/updateTeacher/:id',
         component: UpdateTeacher
+    },
+    {
+        path: '/addFaculty',
+        component: AddFaculty
+    },
+    {
+        path: '/updateFaculty/:id',
+        component: UpdateFaculty
+    },
+    {
+        path: '/addDiscipline',
+        component: AddDiscipline
+    },
+    {
+        path: '/updateDiscipline/:id',
+        component: UpdateDiscipline
     }
 ]
 export default () => createRouter({
-    history:createWebHistory(),
+    history: createWebHistory(),
     routes: routes
 })

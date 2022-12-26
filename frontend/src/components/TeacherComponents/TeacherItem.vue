@@ -10,7 +10,7 @@
         <input type="text" :value="teacher.surname" name="surname">
         <input type="text" :value="teacher.email" name="email">
         <input type="text" :value="teacher.phone" name="phone">
-        <router-link :to="'/update/'+teacher.id">Редагувати</router-link>
+        <router-link :to="'/updateTeacher/'+teacher.id">Редагувати</router-link>
       </form>
       <form action="/teachers">
         <button type="submit" @click="deleteTeacher(teacher.id) ">Видалити</button>
