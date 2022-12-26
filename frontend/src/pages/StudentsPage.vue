@@ -1,24 +1,35 @@
 <template>
   <div>
     <h1>StudentsPage</h1>
+    <hr>
+    {{ students }}
+
+    <StudentList
+        v-bind:students="students"
+    />
+    <br><br>
+    <a href="/addStudent">Додати викладача</a>
+
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import StudentList from "@/components/StudentComponents/StudentList";
 
 export default {
   name: "StudentsPage",
+  components: {StudentList},
   data() {
     return {
-      teachers: null
+      students: []
     };
   },
   mounted() {
-    axios.get('http://localhost:8080/teachers/getAll')
-        .then(response => (this.teachers = response));
-  }
-
+    axios.get('http://localhost:8080/students/getAll')
+        .then(response => (this.students = response.data))
+        .catch(error => console.log(error));
+  },
 }
 </script>
 

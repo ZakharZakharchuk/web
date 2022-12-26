@@ -3,12 +3,11 @@
     <h1>teachers-page</h1>
     <hr>
 
-      <TeacherList
+    <TeacherList
         v-bind:teachers="teachers"
-      />
-
+    />
     <br><br>
-    <a href="/add">Додати викладача</a>
+    <a href="/addTeacher">Додати викладача</a>
   </div>
 </template>
 
@@ -30,11 +29,8 @@ export default {
         .catch(error => console.log(error));
   },
 }
-
-
 </script>
 
 <style scoped>
-
 
 </style>
