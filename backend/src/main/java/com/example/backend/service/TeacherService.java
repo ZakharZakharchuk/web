@@ -7,6 +7,8 @@ public interface TeacherService {
 
     List<TeacherDto> getAllTeachers();
 
+    TeacherDto getTeacherById(Long teacherId);
+
     TeacherDto saveTeacher(TeacherDto teacherDto);
 
     TeacherDto updateTeacher(TeacherDto teacherDto);

@@ -17,11 +17,17 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @CrossOrigin
 public class GroupController {
+
     private final GroupService groupService;
 
     @GetMapping("/getAll")
     public List<GroupDto> getAllGroups() {
         return groupService.getAllGroups();
+    }
+
+    @PostMapping("/getById")
+    public GroupDto getGroupById(@RequestBody GroupDto groupDto) {
+        return groupService.getGroupById(groupDto.getId());
     }
 
     @PostMapping("/save")
@@ -35,7 +41,7 @@ public class GroupController {
     }
 
     @PostMapping("/delete")
-    public void deleteGroup(@RequestBody Long groupId) {
-        groupService.deleteGroupById(groupId);
+    public void deleteGroup(@RequestBody GroupDto groupDto) {
+        groupService.deleteGroupById(groupDto.getId());
     }
 }

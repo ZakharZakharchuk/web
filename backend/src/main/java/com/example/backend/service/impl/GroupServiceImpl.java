@@ -22,6 +22,10 @@ public class GroupServiceImpl implements GroupService {
                 Collectors.toList());
     }
 
+    public GroupDto getGroupById(Long groupId) {
+        return groupMapper.groupToDto(groupRepository.findById(groupId).get());
+    }
+
     public GroupDto saveGroup(GroupDto groupDto) {
         return groupMapper.groupToDto(
             groupRepository.save(groupMapper.dtoToGroup(groupDto)));

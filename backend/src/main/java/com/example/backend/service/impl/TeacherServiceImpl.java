@@ -22,6 +22,10 @@ public class TeacherServiceImpl implements TeacherService {
                 Collectors.toList());
     }
 
+    public TeacherDto getTeacherById(Long teacherId) {
+        return teacherMapper.teacherToDto(teacherRepository.findById(teacherId).get());
+    }
+
     public TeacherDto saveTeacher(TeacherDto teacherDto) {
         return teacherMapper.teacherToDto(
             teacherRepository.save(teacherMapper.dtoToTeacher(teacherDto)));

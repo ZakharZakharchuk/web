@@ -17,11 +17,17 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @CrossOrigin
 public class TeacherController {
+
     private final TeacherService teacherService;
 
     @GetMapping("/getAll")
     public List<TeacherDto> getAllTeachers() {
         return teacherService.getAllTeachers();
+    }
+
+    @PostMapping("/getById")
+    public TeacherDto getTeacherById(@RequestBody TeacherDto teacherDto) {
+        return teacherService.getTeacherById(teacherDto.getId());
     }
 
     @PostMapping("/save")
@@ -35,7 +41,7 @@ public class TeacherController {
     }
 
     @PostMapping("/delete")
-    public void deleteTeacher(@RequestBody Long teacherId) {
-        teacherService.deleteTeacherById(teacherId);
+    public void deleteTeacher(@RequestBody TeacherDto teacherDto) {
+        teacherService.deleteTeacherById(teacherDto.getId());
     }
 }

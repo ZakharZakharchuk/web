@@ -17,25 +17,31 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @CrossOrigin
 public class DisciplineController {
-    private final DisciplineService departmentService;
+
+    private final DisciplineService disciplineService;
 
     @GetMapping("/getAll")
     public List<DisciplineDto> getAllDisciplines() {
-        return departmentService.getAllDisciplines();
+        return disciplineService.getAllDisciplines();
+    }
+
+    @PostMapping("/getById")
+    public DisciplineDto getDisciplineById(@RequestBody DisciplineDto disciplineDto) {
+        return disciplineService.getDisciplineById(disciplineDto.getId());
     }
 
     @PostMapping("/save")
     public DisciplineDto saveDiscipline(@Validated @RequestBody DisciplineDto disciplineDto) {
-        return departmentService.saveDiscipline(disciplineDto);
+        return disciplineService.saveDiscipline(disciplineDto);
     }
 
     @PostMapping("/update")
     public DisciplineDto updateDiscipline(@Validated @RequestBody DisciplineDto disciplineDto) {
-        return departmentService.updateDiscipline(disciplineDto);
+        return disciplineService.updateDiscipline(disciplineDto);
     }
 
     @PostMapping("/delete")
-    public void deleteDiscipline(@RequestBody Long departmentId) {
-        departmentService.deleteDisciplineById(departmentId);
+    public void deleteDiscipline(@RequestBody DisciplineDto disciplineDto) {
+        disciplineService.deleteDisciplineById(disciplineDto.getId());
     }
 }

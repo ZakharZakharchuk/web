@@ -22,6 +22,10 @@ public class NewsServiceImpl implements NewsService {
                 Collectors.toList());
     }
 
+    public NewsDto getNewsById(Long newsId) {
+        return newsMapper.newsToDto(newsRepository.findById(newsId).get());
+    }
+
     public NewsDto saveNews(NewsDto groupDto) {
         return newsMapper.newsToDto(
             newsRepository.save(newsMapper.dtoToNews(groupDto)));

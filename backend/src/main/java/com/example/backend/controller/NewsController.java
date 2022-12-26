@@ -17,11 +17,17 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @CrossOrigin
 public class NewsController {
+
     private final NewsService newsService;
 
     @GetMapping("/getAll")
     public List<NewsDto> getAllGroups() {
         return newsService.getAllNews();
+    }
+
+    @PostMapping("/getById")
+    public NewsDto getNewsById(@RequestBody NewsDto newsDto) {
+        return newsService.getNewsById(newsDto.getId());
     }
 
     @PostMapping("/save")
@@ -35,7 +41,7 @@ public class NewsController {
     }
 
     @PostMapping("/delete")
-    public void deleteGroup(@RequestBody Long newsId) {
-        newsService.deleteNewsById(newsId);
+    public void deleteGroup(@RequestBody NewsDto newsDto) {
+        newsService.deleteNewsById(newsDto.getId());
     }
 }

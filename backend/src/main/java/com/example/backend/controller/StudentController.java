@@ -1,6 +1,7 @@
 package com.example.backend.controller;
 
 import com.example.backend.dto.StudentDto;
+import com.example.backend.dto.TeacherDto;
 import com.example.backend.service.StudentService;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -17,11 +18,17 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @CrossOrigin
 public class StudentController {
+
     private final StudentService studentService;
 
     @GetMapping("/getAll")
     public List<StudentDto> getAllStudents() {
         return studentService.getAllStudents();
+    }
+
+    @PostMapping("/getById")
+    public StudentDto getStudentById(@RequestBody StudentDto studentDto) {
+        return studentService.getStudentById(studentDto.getId());
     }
 
     @PostMapping("/save")
@@ -35,7 +42,7 @@ public class StudentController {
     }
 
     @PostMapping("/delete")
-    public void deleteStudent(@RequestBody Long studentId) {
-        studentService.deleteStudentById(studentId);
+    public void deleteStudent(@RequestBody StudentDto studentDto) {
+        studentService.deleteStudentById(studentDto.getId());
     }
 }

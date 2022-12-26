@@ -7,6 +7,8 @@ public interface GroupService {
 
     List<GroupDto> getAllGroups();
 
+    GroupDto getGroupById(Long groupId);
+
     GroupDto saveGroup(GroupDto groupDto);
 
     GroupDto updateGroup(GroupDto groupDto);

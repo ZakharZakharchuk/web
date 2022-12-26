@@ -22,6 +22,10 @@ public class ScheduleServiceImpl implements ScheduleService {
                 Collectors.toList());
     }
 
+    public ScheduleDto getScheduleById(Long scheduleId) {
+        return scheduleMapper.scheduleToDto(scheduleRepository.findById(scheduleId).get());
+    }
+
     public ScheduleDto saveSchedule(ScheduleDto scheduleDto) {
         return scheduleMapper.scheduleToDto(
             scheduleRepository.save(scheduleMapper.dtoToSchedule(scheduleDto)));

@@ -7,6 +7,8 @@ public interface DisciplineService {
 
     List<DisciplineDto> getAllDisciplines();
 
+    DisciplineDto getDisciplineById(Long disciplineId);
+
     DisciplineDto saveDiscipline(DisciplineDto disciplineDto);
 
     DisciplineDto updateDiscipline(DisciplineDto disciplineDto);
