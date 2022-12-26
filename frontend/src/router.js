@@ -14,6 +14,12 @@ import AddFaculty from "@/components/FacultyComponents/AddFaculty";
 import UpdateFaculty from "@/components/FacultyComponents/UpdateFaculty";
 import AddDiscipline from "@/components/DisciplinesComponents/AddDiscipline";
 import UpdateDiscipline from "@/components/DisciplinesComponents/UpdateDiscipline";
+import AddStudent from "@/components/StudentComponents/AddStudent";
+import UpdateStudent from "@/components/StudentComponents/UpdateStudent";
+import AddGroup from "@/components/GroupComponents/AddGroup";
+import UpdateGroup from "@/components/GroupComponents/UpdateGroup";
+import AddDepartment from "@/components/DepartmentComponents/AddDepartment";
+import UpdateDepartment from "@/components/DepartmentComponents/UpdateDepartment";
 
 
 const routes = [
@@ -76,6 +82,30 @@ const routes = [
     {
         path: '/updateDiscipline/:id',
         component: UpdateDiscipline
+    },
+    {
+        path: '/addStudent',
+        component: AddStudent
+    },
+    {
+        path: '/updateStudent/:id',
+        component: UpdateStudent
+    },
+    {
+        path: '/addGroup',
+        component: AddGroup
+    },
+    {
+        path: '/updateGroup/:id',
+        component: UpdateGroup
+    },
+    {
+        path: '/addDepartment',
+        component: AddDepartment
+    },
+    {
+        path: '/updateDepartment/:id',
+        component: UpdateDepartment
     }
 ]
 export default () => createRouter({
