@@ -7,6 +7,8 @@ public interface ScheduleService {
 
     List<ScheduleDto> getAllSchedules();
 
+    ScheduleDto getScheduleById(Long scheduleId);
+
     ScheduleDto saveSchedule(ScheduleDto scheduleDto);
 
     ScheduleDto updateSchedule(ScheduleDto scheduleDto);

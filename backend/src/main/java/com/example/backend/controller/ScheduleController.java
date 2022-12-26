@@ -17,11 +17,17 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @CrossOrigin
 public class ScheduleController {
+
     private final ScheduleService scheduleService;
 
     @GetMapping("/getAll")
     public List<ScheduleDto> getAllSchedules() {
         return scheduleService.getAllSchedules();
+    }
+
+    @PostMapping("/getById")
+    public ScheduleDto getScheduleById(@RequestBody ScheduleDto scheduleDto) {
+        return scheduleService.getScheduleById(scheduleDto.getId());
     }
 
     @PostMapping("/save")
@@ -35,7 +41,7 @@ public class ScheduleController {
     }
 
     @PostMapping("/delete")
-    public void deleteSchedule(@RequestBody Long scheduleId) {
-        scheduleService.deleteScheduleById(scheduleId);
+    public void deleteSchedule(@RequestBody ScheduleDto scheduleDto) {
+        scheduleService.deleteScheduleById(scheduleDto.getId());
     }
 }

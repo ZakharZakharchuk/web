@@ -7,6 +7,8 @@ public interface StudentService {
 
     List<StudentDto> getAllStudents();
 
+    StudentDto getStudentById(Long studentId);
+
     StudentDto saveStudent(StudentDto studentDto);
 
     StudentDto updateStudent(StudentDto studentDto);

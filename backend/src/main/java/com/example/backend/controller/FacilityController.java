@@ -1,6 +1,7 @@
 package com.example.backend.controller;
 
 import com.example.backend.dto.FacilityDto;
+import com.example.backend.dto.GroupDto;
 import com.example.backend.service.FacilityService;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -25,6 +26,11 @@ public class FacilityController {
         return facilityService.getAllFacilities();
     }
 
+    @PostMapping("/getById")
+    public FacilityDto getFacilityById(@RequestBody FacilityDto facilityDto) {
+        return facilityService.getFacilityById(facilityDto.getId());
+    }
+
     @PostMapping("/save")
     public FacilityDto saveFacility(@Validated @RequestBody FacilityDto facilityDto) {
         return facilityService.saveFacility(facilityDto);
@@ -36,7 +42,7 @@ public class FacilityController {
     }
 
     @PostMapping("/delete")
-    public void deleteFacility(@RequestBody Long facilityId) {
-        facilityService.deleteFacilityById(facilityId);
+    public void deleteFacility(@RequestBody FacilityDto facilityDto) {
+        facilityService.deleteFacilityById(facilityDto.getId());
     }
 }

@@ -22,6 +22,10 @@ public class DepartmentServiceImpl implements DepartmentService {
                 Collectors.toList());
     }
 
+    public DepartmentDto getDepartmentById(Long departmentId) {
+        return departmentMapper.departmentToDto(departmentRepository.findById(departmentId).get());
+    }
+
     public DepartmentDto saveDepartment(DepartmentDto departmentDto) {
         return departmentMapper.departmentToDto(
             departmentRepository.save(departmentMapper.dtoToDepartment(departmentDto)));

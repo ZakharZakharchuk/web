@@ -22,6 +22,10 @@ public class FacilityServiceImpl implements FacilityService {
                 Collectors.toList());
     }
 
+    public FacilityDto getFacilityById(Long facilityId) {
+        return facilityMapper.facilityToDto(facilityRepository.findById(facilityId).get());
+    }
+
     public FacilityDto saveFacility(FacilityDto facilityDto) {
         return facilityMapper.facilityToDto(
             facilityRepository.save(facilityMapper.dtoToFacility(facilityDto)));

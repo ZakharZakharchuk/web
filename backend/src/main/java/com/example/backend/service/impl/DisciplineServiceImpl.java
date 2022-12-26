@@ -22,6 +22,10 @@ public class DisciplineServiceImpl implements DisciplineService {
                 Collectors.toList());
     }
 
+    public DisciplineDto getDisciplineById(Long disciplineId) {
+        return disciplineMapper.disciplineToDto(disciplineRepository.findById(disciplineId).get());
+    }
+
     public DisciplineDto saveDiscipline(DisciplineDto disciplineDto) {
         return disciplineMapper.disciplineToDto(
             disciplineRepository.save(disciplineMapper.dtoToDiscipline(disciplineDto)));

@@ -7,6 +7,8 @@ public interface FacilityService {
 
     List<FacilityDto> getAllFacilities();
 
+    FacilityDto getFacilityById(Long facilityId);
+
     FacilityDto saveFacility(FacilityDto facilityDto);
 
     FacilityDto updateFacility(FacilityDto facilityDto);

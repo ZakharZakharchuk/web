@@ -22,6 +22,10 @@ public class StudentServiceImpl implements StudentService {
                 Collectors.toList());
     }
 
+    public StudentDto getStudentById(Long studentId) {
+        return studentMapper.studentToDto(studentRepository.findById(studentId).get());
+    }
+
     public StudentDto saveStudent(StudentDto studentDto) {
         return studentMapper.studentToDto(
             studentRepository.save(studentMapper.dtoToStudent(studentDto)));

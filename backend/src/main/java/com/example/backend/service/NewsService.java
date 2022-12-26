@@ -7,6 +7,8 @@ public interface NewsService {
 
     List<NewsDto> getAllNews();
 
+    NewsDto getNewsById(Long newsId);
+
     NewsDto saveNews(NewsDto groupDto);
 
     NewsDto updateNews(NewsDto groupDto);

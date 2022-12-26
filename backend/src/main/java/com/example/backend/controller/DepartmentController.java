@@ -25,6 +25,11 @@ public class DepartmentController {
         return departmentService.getAllDepartments();
     }
 
+    @PostMapping("/getById")
+    public DepartmentDto getDepartmentById(@RequestBody DepartmentDto departmentDto) {
+        return departmentService.getDepartmentById(departmentDto.getId());
+    }
+
     @PostMapping("/save")
     public DepartmentDto saveDepartment(@Validated @RequestBody DepartmentDto departmentDto) {
         return departmentService.saveDepartment(departmentDto);
@@ -36,7 +41,7 @@ public class DepartmentController {
     }
 
     @PostMapping("/delete")
-    public void deleteDepartment(@RequestBody Long departmentId) {
-        departmentService.deleteDepartmentById(departmentId);
+    public void deleteDepartment(@RequestBody DepartmentDto departmentDto) {
+        departmentService.deleteDepartmentById(departmentDto.getId());
     }
 }
