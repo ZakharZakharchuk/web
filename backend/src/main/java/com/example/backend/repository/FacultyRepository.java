@@ -1,17 +1,17 @@
 package com.example.backend.repository;
 
-import com.example.backend.entity.Facility;
+import com.example.backend.entity.Faculty;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface FacilityRepository extends CrudRepository<Facility, Long> {
-    List<Facility> findAll();
+public interface FacultyRepository extends CrudRepository<Faculty, Long> {
+    List<Faculty> findAll();
 
-    Optional<Facility> findById(Long facilityId);
+    Optional<Faculty> findById(Long facilityId);
 
-    Facility save(Facility facility);
+    Faculty save(Faculty faculty);
     void deleteById(Long facilityId);
 }
