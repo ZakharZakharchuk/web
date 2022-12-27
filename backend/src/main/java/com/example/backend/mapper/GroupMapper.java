@@ -23,9 +23,9 @@ public class GroupMapper {
 
     public Group dtoToGroup(GroupDto groupDto) {
         Group group = new Group();
-        group.setId(group.getId());
-        group.setName(group.getName());
-        group.setCourse(group.getCourse());
+        group.setId(groupDto.getId());
+        group.setName(groupDto.getName());
+        group.setCourse(groupDto.getCourse());
         group.setDepartment(departmentRepository.findById(groupDto.getDepartmentId()).get());
         return group;
     }
