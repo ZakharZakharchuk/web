@@ -29,9 +29,9 @@ public class ScheduleMapper {
 
     public Schedule dtoToSchedule(ScheduleDto scheduleDto) {
         Schedule schedule = new Schedule();
-        schedule.setId(schedule.getId());
-        schedule.setTime(schedule.getTime());
-        schedule.setClassroom(schedule.getClassroom());
+        schedule.setId(scheduleDto.getId());
+        schedule.setTime(scheduleDto.getTime());
+        schedule.setClassroom(scheduleDto.getClassroom());
         schedule.setGroup(groupRepository.findById(scheduleDto.getGroupId()).get());
         schedule.setDiscipline(disciplineRepository.findById(scheduleDto.getDisciplineId()).get());
         schedule.setTeacher(teacherRepository.findById(scheduleDto.getTeacherId()).get());
