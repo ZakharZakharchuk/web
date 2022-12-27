@@ -1,6 +1,5 @@
 package com.example.backend.entity;
 
-import java.util.Date;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -35,7 +34,7 @@ public class Schedule {
     @JoinColumn(name = "group_id")
     private Group group;
     @Column(name = "time")
-    private Date time;
+    private String time;
     @Column(name = "classroom")
     private String classroom;
     @ManyToMany
