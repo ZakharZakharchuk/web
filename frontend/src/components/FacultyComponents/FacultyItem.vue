@@ -4,7 +4,7 @@
     <div class="table">
 
       <form action="/faculty">
-        <input type="text" :value="faculty.id" name="id">
+        <input type="hidden" :value="faculty.id" name="id">
         <input type="text" :value="faculty.name" name="name">
         <input type="text" :value="faculty.shortName" name="shortName">
         <router-link :to="'/updateFaculty/'+faculty.id">Редагувати</router-link>

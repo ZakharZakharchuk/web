@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf59251a-15e7-4ded-8190-beb3c29c3473" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/TeacherComponents/TeacherItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/TeacherComponents/TeacherList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/web.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AddTeacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TeacherComponents/AddTeacher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/UpdateTeacher.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/TeachersPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/TeachersPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FacultyComponents/AddFaculty.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FacultyComponents/AddFaculty.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/StudentComponents/AddStudent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StudentComponents/AddStudent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/StudentComponents/StudentItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StudentComponents/StudentItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/StudentComponents/StudentList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StudentComponents/StudentList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/StudentsPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/StudentsPage.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,22 +20,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2IuNVHoyuyGemCaSb7TFncfws00" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Lenovo/webProject/web",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,6 +54,8 @@
       <workItem from="1671297706002" duration="5684000" />
       <workItem from="1671354476313" duration="72000" />
       <workItem from="1672001321574" duration="68000" />
+      <workItem from="1672095382477" duration="15000" />
+      <workItem from="1672095408075" duration="192000" />
     </task>
     <servers />
   </component>
@@ -75,6 +72,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

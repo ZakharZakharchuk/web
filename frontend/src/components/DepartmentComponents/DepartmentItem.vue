@@ -4,14 +4,14 @@
 
 
     <form action="/department">
-      <input type="text" :value="department.id" name="id">
-      <input type="text" :value="department.facilityId" name="facilityId">
+      <input type="hidden" :value="department.id" name="id">
+      <input type="text" :value="name" name="facilityName">
       <input type="text" :value="department.name" name="name">
       <input type="text" :value="department.shortName" name="shortName">
-      <router-link :to="'/updateTeacher/'+department.id">Редагувати</router-link>
+      <router-link :to="'/updateDepartment/'+department.id">Редагувати</router-link>
     </form>
     <form action="/department">
-      <button type="submit" @click="deleteTeacher(department.id) ">Видалити</button>
+      <button type="submit" @click="deleteDepartment(department.id) ">Видалити</button>
     </form>
   </div>
 </div>
@@ -27,12 +27,21 @@ export default {
       type: Object,
     }
   },
+  data: () => ({
+    name: ''
+  }),
   methods: {
-    deleteTeacher(id) {
+    deleteDepartment(id) {
       axios.post('http://localhost:8080/departments/delete', {
         id: id,
       })
     }
+  },
+  async mounted() {
+    const result = await axios.post('http://localhost:8080/facilities/getById', {
+      id: this.department.facilityId,
+    })
+    this.name = result.data.name
   }
 }
 </script>

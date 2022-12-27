@@ -5,7 +5,7 @@
 
 
       <form action="/teachers">
-        <input type="text" :value="teacher.id" name="id">
+        <input type="hidden" :value="teacher.id" name="id">
         <input type="text" :value="teacher.name" name="name">
         <input type="text" :value="teacher.surname" name="surname">
         <input type="text" :value="teacher.email" name="email">
