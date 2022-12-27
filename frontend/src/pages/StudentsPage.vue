@@ -2,7 +2,6 @@
   <div>
     <h1>StudentsPage</h1>
     <hr>
-    {{ students }}
 
     <StudentList
         v-bind:students="students"

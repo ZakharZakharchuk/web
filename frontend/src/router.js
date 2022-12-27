@@ -20,6 +20,10 @@ import AddGroup from "@/components/GroupComponents/AddGroup";
 import UpdateGroup from "@/components/GroupComponents/UpdateGroup";
 import AddDepartment from "@/components/DepartmentComponents/AddDepartment";
 import UpdateDepartment from "@/components/DepartmentComponents/UpdateDepartment";
+import UpdateSchedule from "@/components/ScheduleComponents/UpdateSchedule";
+import AddSchedule from "@/components/ScheduleComponents/AddSchedule";
+import AddNews from "@/components/NewsComponents/AddNews";
+import UpdateNews from "@/components/NewsComponents/UpdateNews";
 
 
 const routes = [
@@ -106,6 +110,22 @@ const routes = [
     {
         path: '/updateDepartment/:id',
         component: UpdateDepartment
+    },
+    {
+        path: '/addSchedule',
+        component: AddSchedule
+    },
+    {
+        path: '/updateSchedule/:id',
+        component: UpdateSchedule
+    },
+    {
+        path: '/addNews',
+        component: AddNews
+    },
+    {
+        path: '/updateNews/:id',
+        component: UpdateNews
     }
 ]
 export default () => createRouter({

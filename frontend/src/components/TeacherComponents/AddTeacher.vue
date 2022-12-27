@@ -24,8 +24,7 @@ export default {
     email: '',
     surname: '',
     name: '',
-    phone: '',
-    teachers: [],
+    phone: ''
   }),
   methods: {
     submitForm() {

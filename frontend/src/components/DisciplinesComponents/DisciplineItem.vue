@@ -4,7 +4,7 @@
 
 
     <form action="/disciplines">
-      <input type="text" :value="discipline.id" name="id">
+      <input type="hidden" :value="discipline.id" name="id">
       <input type="text" :value="discipline.name" name="name">
       <router-link :to="'/updateDiscipline/'+discipline.id">Редагувати</router-link>
     </form>

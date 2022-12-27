@@ -4,14 +4,14 @@
 
 
     <form action="/group">
-      <input type="text" :value="group.id" name="id">
-      <input type="text" :value="group.departmentId" name="departmentId">
+      <input type="hidden" :value="group.id" name="id">
+      <input type="text" :value="name" name="departmentName">
       <input type="text" :value="group.name" name="name">
       <input type="text" :value="group.course" name="course">
-      <router-link :to="'/updateTeacher/'+group.id">Редагувати</router-link>
+      <router-link :to="'/updateGroup/'+group.id">Редагувати</router-link>
     </form>
     <form action="/group">
-      <button type="submit" @click="deleteTeacher(group.id) ">Видалити</button>
+      <button type="submit" @click="deleteGroup(group.id) ">Видалити</button>
     </form>
   </div>
 </div>
@@ -27,12 +27,21 @@ export default {
       type: Object,
     }
   },
+  data: () => ({
+    name: ''
+  }),
   methods: {
-    deleteTeacher(id) {
+    deleteGroup(id) {
       axios.post('http://localhost:8080/groups/delete', {
         id: id,
       })
     }
+  },
+  async mounted() {
+    const result = await axios.post('http://localhost:8080/departments/getById', {
+      id: this.group.departmentId,
+    })
+    this.name = result.data.name
   }
 }
 </script>
