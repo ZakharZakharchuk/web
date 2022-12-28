@@ -30,38 +30,4 @@ export default {
 
 <style scoped>
 
-header {
-  display: flex;
-  width: 100%;
-  color: black;
-}
-
-.inHeader {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.names {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-self: center;
-  justify-content: flex-start;
-}
-.login{
-  display: flex;
-  width: 20%;
-  flex-direction: row;
-  align-self: center;
-  justify-content: space-around;
-}
-.names a {
-  margin: 2%;
-}
-.login a{
-  margin: 6%;
-}
-
 </style>

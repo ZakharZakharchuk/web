@@ -32,15 +32,5 @@ export default {
 </script>
 
 <style scoped>
-footer p {
-  color: lightgray;
-}
-footer {
-  display: flex;
-  justify-content: space-around;
-  padding: 3px;
-  background-color: royalblue;
-  color: white;
-  margin-top: 10%;
-}
+
 </style>

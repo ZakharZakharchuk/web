@@ -2,11 +2,16 @@
   <div>
     <form action="/schedule">
       <input type="hidden" v-model="id" name="id">
-      <input type="text" v-model="teacherId" name="teacherId">
-      <input type="text" v-model="disciplineId" name="disciplineId">
-      <input type="text" v-model="groupId" name="groupId">
-      <input type="text" v-model="time" name="time">
-      <input type="text" v-model="classroom" name="classroom">
+      <label for="teacherId">teacherId:</label><br>
+      <input type="text" v-model="teacherId" name="teacherId"><br>
+      <label for="disciplineId">disciplineId:</label><br>
+      <input type="text" v-model="disciplineId" name="disciplineId"><br>
+      <label for="groupId">groupId:</label><br>
+      <input type="text" v-model="groupId" name="groupId"><br>
+      <label for="time">time:</label><br>
+      <input type="text" v-model="time" name="time"><br>
+      <label for="classroom">classroom:</label><br>
+      <input type="text" v-model="classroom" name="classroom"><br>
       <input type="submit" v-on:click="updateSchedule()" value="Редагувати">
     </form>
 
@@ -69,15 +74,14 @@ export default {
   },
   methods: {
     updateSchedule() {
-      console.warn(this.teacher)
-      axios.post('http://localhost:8080/teachers/update', {
+      axios.post('http://localhost:8080/schedules/update', {
         id: this.id,
         teacherId: this.teacherId,
         disciplineId: this.disciplineId,
         groupId: this.groupId,
         time: this.time,
         classroom: this.classroom
-      })
+      }).catch(error => console.log(error));
     }
   }
 }

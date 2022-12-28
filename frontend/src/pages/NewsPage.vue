@@ -7,7 +7,7 @@
     v-bind:news="news"
     />
     <br><br>
-    <a href="/addNews">Додати викладача</a>
+    <a href="/addNews">Додати новини</a>
   </div>
 </template>
 

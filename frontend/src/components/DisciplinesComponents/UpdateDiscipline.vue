@@ -2,7 +2,8 @@
 <div>
   <form action="/disciplines">
     <input type="hidden" v-model="id" name="id">
-    <input type="text" v-model="name" name="name">
+    <label for="name">name:</label><br>
+    <input type="text" v-model="name" name="name"><br>
     <input type="submit" v-on:click="updateDiscipline()" value="Редагувати">
   </form>
 </div>

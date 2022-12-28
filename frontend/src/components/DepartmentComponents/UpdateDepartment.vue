@@ -2,9 +2,12 @@
 <div>
   <form action="/department">
     <input type="hidden" v-model="id" name="id">
-    <input type="text" v-model="facilityId" name="facilityId">
-    <input type="text" v-model="name" name="name">
-    <input type="text" v-model="shortName" name="shortName">
+    <label for="facilityId">facilityId:</label><br>
+    <input type="text" v-model="facilityId" name="facilityId"><br>
+    <label for="name">name:</label><br>
+    <input type="text" v-model="name" name="name"><br>
+    <label for="shortName">shortName:</label><br>
+    <input type="text" v-model="shortName" name="shortName"><br>
     <input type="submit" v-on:click="updateTeacher()" value="Редагувати">
   </form>
   <h3>faculties</h3>

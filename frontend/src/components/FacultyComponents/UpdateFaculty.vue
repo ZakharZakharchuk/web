@@ -2,8 +2,10 @@
 <div>
   <form action="/faculty">
     <input type="hidden" v-model="id" name="id">
-    <input type="text" v-model="name" name="name">
-    <input type="text" v-model="shortName" name="surname">
+    <label for="name">name:</label><br>
+    <input type="text" v-model="name" name="name"><br>
+    <label for="shortName">shortName:</label><br>
+    <input type="text" v-model="shortName" name="surname"><br>
     <input type="submit" v-on:click="updateTeacher()" value="Редагувати">
   </form>
 </div>

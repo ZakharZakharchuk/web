@@ -2,16 +2,11 @@
   <div>
 
     <div class="table">
-
-
-      <form action="/teachers">
-        <input type="hidden" :value="teacher.id" name="id">
-        <input type="text" :value="teacher.name" name="name">
-        <input type="text" :value="teacher.surname" name="surname">
-        <input type="text" :value="teacher.email" name="email">
-        <input type="text" :value="teacher.phone" name="phone">
+      <div>{{teacher.name}}</div>
+      <div>{{teacher.surname}}</div>
+      <div>{{teacher.email}}</div>
+      <div>{{teacher.phone}}</div>
         <router-link :to="'/updateTeacher/'+teacher.id">Редагувати</router-link>
-      </form>
       <form action="/teachers">
         <button type="submit" @click="deleteTeacher(teacher.id) ">Видалити</button>
       </form>

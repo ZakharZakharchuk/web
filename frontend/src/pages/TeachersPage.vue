@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="root">
     <h1>teachers-page</h1>
     <hr>
 

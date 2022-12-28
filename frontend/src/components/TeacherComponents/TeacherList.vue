@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row">
+    <div class="table">
       <div class="cell">Name</div>
       <div class="cell">Surname</div>
       <div class="cell">Email</div>

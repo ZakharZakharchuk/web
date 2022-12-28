@@ -6,7 +6,7 @@
         v-bind:departments="departments"
     />
     <br><br>
-    <a href="/addDepartment">Додати викладача</a>
+    <a href="/addDepartment">Додати кафедру</a>
   </div>
 </template>
 

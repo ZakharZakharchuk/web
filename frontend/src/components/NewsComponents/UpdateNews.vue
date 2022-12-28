@@ -2,7 +2,8 @@
   <div>
     <form action="/news">
       <input type="hidden" v-model="id" name="id">
-      <input type="text" v-model="message" name="message">
+      <label for="message">message:</label><br>
+      <input type="text" v-model="message" name="message"><br>
       <input type="submit" v-on:click="updateNews()" value="Редагувати">
     </form>
   </div>

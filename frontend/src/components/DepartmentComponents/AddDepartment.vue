@@ -9,7 +9,10 @@
     <input type="text" id="shortName" name="shortName" v-model="shortName" required ><br><br>
     <input v-on:click="submitForm()" type="submit" value="Submit">
   </form>
-
+  <h3>faculties</h3>
+  <p
+      v-for="(faculty,key) in faculties" :key="key"
+      v-bind:faculty="faculty">{{faculty.name + ' - ' + faculty.id}}</p>
 </div>
 </template>
 
@@ -22,7 +25,15 @@ export default {
     facilityId: '',
     name: '',
     shortName: '',
+    faculties:[]
   }),
+  async mounted() {
+
+    axios.get('http://localhost:8080/facilities/getAll')
+        .then(response => (this.faculties = response.data))
+        .catch(error => console.log(error));
+
+  },
   methods: {
     submitForm() {
       axios.post('http://localhost:8080/departments/save', {

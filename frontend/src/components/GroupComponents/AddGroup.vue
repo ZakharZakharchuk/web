@@ -9,6 +9,11 @@
     <input type="text" id="course" name="course" v-model="course" required ><br><br>
     <input v-on:click="submitForm()" type="submit" value="Submit">
   </form>
+
+  <h3>departments</h3>
+  <p
+      v-for="(department,key) in departments" :key="key"
+      v-bind:department="department">{{department.name + ' - ' + department.id}}</p>
 </div>
 </template>
 
@@ -21,7 +26,16 @@ export default {
     departmentId: '',
     name: '',
     course: '',
+    departments:[]
   }),
+  async mounted() {
+
+
+    axios.get('http://localhost:8080/departments/getAll')
+        .then(response => (this.departments = response.data))
+        .catch(error => console.log(error));
+
+  },
   methods: {
     submitForm() {
       axios.post('http://localhost:8080/groups/save', {

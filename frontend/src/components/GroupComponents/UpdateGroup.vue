@@ -2,9 +2,12 @@
 <div>
   <form action="/group">
     <input type="hidden" v-model="id" name="id">
-    <input type="text" v-model="departmentId" name="departmentId">
-    <input type="text" v-model="name" name="name">
-    <input type="text" v-model="course" name="course">
+    <label for="departmentId">departmentId:</label><br>
+    <input type="text" v-model="departmentId" name="departmentId"><br>
+    <label for="name">name:</label><br>
+    <input type="text" v-model="name" name="name"><br>
+    <label for="course">course:</label><br>
+    <input type="text" v-model="course" name="course"><br>
     <input type="submit" v-on:click="updateGroup()" value="Редагувати">
   </form>
   <h3>departments</h3>

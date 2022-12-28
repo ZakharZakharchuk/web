@@ -3,11 +3,30 @@
   <component name="ChangeListManager">
     <list default="true" id="bf59251a-15e7-4ded-8190-beb3c29c3473" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/FacultyComponents/AddFaculty.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FacultyComponents/AddFaculty.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DepartmentComponents/AddDepartment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DepartmentComponents/AddDepartment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DepartmentComponents/UpdateDepartment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DepartmentComponents/UpdateDepartment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DisciplinesComponents/UpdateDiscipline.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DisciplinesComponents/UpdateDiscipline.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FacultyComponents/UpdateFaculty.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FacultyComponents/UpdateFaculty.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GroupComponents/AddGroup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GroupComponents/AddGroup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GroupComponents/UpdateGroup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GroupComponents/UpdateGroup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/NewsComponents/UpdateNews.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/NewsComponents/UpdateNews.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ScheduleComponents/AddSchedule.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ScheduleComponents/AddSchedule.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ScheduleComponents/UpdateSchedule.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ScheduleComponents/UpdateSchedule.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/StudentComponents/AddStudent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StudentComponents/AddStudent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/StudentComponents/StudentItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StudentComponents/StudentItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/StudentComponents/StudentList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StudentComponents/StudentList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/StudentComponents/UpdateStudent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StudentComponents/UpdateStudent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TeacherComponents/AddTeacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TeacherComponents/AddTeacher.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TeacherComponents/TeacherItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TeacherComponents/TeacherItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TeacherComponents/TeacherList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TeacherComponents/TeacherList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TeacherComponents/UpdateTeacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TeacherComponents/UpdateTeacher.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/layouts/FooterComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/layouts/FooterComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/layouts/HeaderComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/layouts/HeaderComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/DepartmentPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/DepartmentPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/NewsPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/NewsPage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/StudentsPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/StudentsPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/TeachersPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/TeachersPage.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +49,6 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/Lenovo/webProject/web",
     "node.js.detected.package.eslint": "true",
@@ -56,6 +73,9 @@
       <workItem from="1672001321574" duration="68000" />
       <workItem from="1672095382477" duration="15000" />
       <workItem from="1672095408075" duration="192000" />
+      <workItem from="1672142339314" duration="36000" />
+      <workItem from="1672142767219" duration="154000" />
+      <workItem from="1672179606764" duration="4415000" />
     </task>
     <servers />
   </component>

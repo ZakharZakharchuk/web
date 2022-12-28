@@ -7,7 +7,7 @@
         v-bind:students="students"
     />
     <br><br>
-    <a href="/addStudent">Додати викладача</a>
+    <a href="/addStudent">Додати студента</a>
 
   </div>
 </template>
