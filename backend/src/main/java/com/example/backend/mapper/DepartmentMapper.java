@@ -2,7 +2,7 @@ package com.example.backend.mapper;
 
 import com.example.backend.dto.DepartmentDto;
 import com.example.backend.entity.Department;
-import com.example.backend.repository.FacilityRepository;
+import com.example.backend.repository.FacultyRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -10,14 +10,14 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class DepartmentMapper {
 
-    private final FacilityRepository facilityRepository;
+    private final FacultyRepository facultyRepository;
 
     public DepartmentDto departmentToDto(Department department) {
         DepartmentDto departmentDto = new DepartmentDto();
         departmentDto.setId(department.getId());
         departmentDto.setName(department.getName());
         departmentDto.setShortName(department.getShortName());
-        departmentDto.setFacilityId(department.getFacility().getId());
+        departmentDto.setFacilityId(department.getFaculty().getId());
         return departmentDto;
     }
 
@@ -26,7 +26,7 @@ public class DepartmentMapper {
         department.setId(departmentDto.getId());
         department.setName(departmentDto.getName());
         department.setShortName(departmentDto.getShortName());
-        department.setFacility(facilityRepository.findById(departmentDto.getFacilityId()).get());
+        department.setFaculty(facultyRepository.findById(departmentDto.getFacilityId()).get());
         return department;
     }
 }

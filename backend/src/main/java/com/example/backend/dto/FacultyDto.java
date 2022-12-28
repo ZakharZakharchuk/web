@@ -4,7 +4,7 @@ import javax.validation.constraints.Pattern;
 import lombok.Data;
 
 @Data
-public class FacilityDto {
+public class FacultyDto {
 
     private Long id;
     @Pattern(regexp = "([A-Za-z0-9])+")

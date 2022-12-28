@@ -1,6 +1,5 @@
 package com.example.backend.entity;
 
-import java.util.Date;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,9 +11,11 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "schedules")
 public class Schedule {
@@ -33,7 +34,7 @@ public class Schedule {
     @JoinColumn(name = "group_id")
     private Group group;
     @Column(name = "time")
-    private Date time;
+    private String time;
     @Column(name = "classroom")
     private String classroom;
     @ManyToMany
@@ -42,4 +43,40 @@ public class Schedule {
         joinColumns = @JoinColumn(name = "schedule_id"),
         inverseJoinColumns = @JoinColumn(name = "student_id"))
     private List<Student> studentList;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        Schedule schedule = (Schedule) o;
+
+        if (!id.equals(schedule.id)) {
+            return false;
+        }
+        if (!teacher.equals(schedule.teacher)) {
+            return false;
+        }
+        if (!discipline.equals(schedule.discipline)) {
+            return false;
+        }
+        if (!time.equals(schedule.time)) {
+            return false;
+        }
+        return classroom.equals(schedule.classroom);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id.hashCode();
+        result = 31 * result + teacher.hashCode();
+        result = 31 * result + discipline.hashCode();
+        result = 31 * result + time.hashCode();
+        result = 31 * result + classroom.hashCode();
+        return result;
+    }
 }

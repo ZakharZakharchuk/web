@@ -24,10 +24,10 @@ public class StudentMapper {
 
     public Student dtoToStudent(StudentDto studentDto) {
         Student student = new Student();
-        student.setId(student.getId());
-        student.setName(student.getName());
-        student.setEmail(student.getEmail());
-        student.setPhone(student.getPhone());
+        student.setId(studentDto.getId());
+        student.setName(studentDto.getName());
+        student.setEmail(studentDto.getEmail());
+        student.setPhone(studentDto.getPhone());
         student.setGroup(groupRepository.findById(studentDto.getGroupId()).get());
         return student;
     }
